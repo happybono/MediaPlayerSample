@@ -1,0 +1,32 @@
+﻿<Window x:Class="MediaPlayerSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MediaPlayerSample"
+        mc:Ignorable="d"
+        Title="MediaPlayerSample" Height="405.602" Width="592.343" ResizeMode="CanMinimize">
+
+    <Grid>
+        <Button x:Name="playButton" Content="Play" HorizontalAlignment="Left" Height="27" Margin="39,146,0,0" VerticalAlignment="Top" Width="72" Click="playButton_Click"/>
+        <Button x:Name="pauseButton" Content="Pause" HorizontalAlignment="Left" Height="27" Margin="116,146,0,0" VerticalAlignment="Top" Width="72" Click="pauseButton_Click"/>
+        <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Height="27" Margin="193,146,0,0" VerticalAlignment="Top" Width="72" Click="stopButton_Click"/>
+        <Button x:Name="loadButton" Content="Open" HorizontalAlignment="Left" Height="27" Margin="279,146,0,0" VerticalAlignment="Top" Width="72" Click="loadButton_Click"/>
+        <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Height="27" Margin="39,339,0,0" VerticalAlignment="Top" Width="72" Click="addButton_Click"/>
+        <Button x:Name="removeButton" Content="Remove" HorizontalAlignment="Left" Height="27" Margin="409,339,0,0" VerticalAlignment="Top" Width="72" Click="removeButton_Click"/>
+        <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Left" Height="27" Margin="488,340,0,0" VerticalAlignment="Top" Width="72" Click="clearButton_Click"/>
+
+        <Label x:Name="volumeLabel" Content="Volume : 0" HorizontalAlignment="Left" Height="26" Margin="464,149,0,0" VerticalAlignment="Top" Width="96"/>
+        <Label x:Name="progressLabel" Content="00:00" Height="26" Margin="464,109,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="39"/>
+        <Label x:Name="separatorLabel" Content="/" Height="26" Margin="502,109,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="22"/>
+        <Label x:Name="totalTimeLabel" Content="00:00" Height="26" Margin="519,109,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="39"/>
+        <Label x:Name="artistNameLabel" Content="artistName" HorizontalAlignment="Left" Margin="39,41,0,0" VerticalAlignment="Top" Width="521"/>
+        <Label x:Name="songTitleLabel" Content="" HorizontalAlignment="Left" Margin="39,66,0,0" VerticalAlignment="Top" Width="521"/>
+        <Label x:Name="albumTitleLabel" Content="" HorizontalAlignment="Left" Margin="39,15,0,0" VerticalAlignment="Top" Width="521"/>
+
+        <Slider x:Name="volumeSlider" HorizontalAlignment="Left" Height="22" Margin="372,151,0,0" VerticalAlignment="Top" Width="79" ValueChanged="volumeSlider_ValueChanged"/>
+        <Slider x:Name= "progressSlider" HorizontalAlignment="Left" Height="20" Margin="39,111,0,0" VerticalAlignment="Top" Width="412" ValueChanged="progressSlider_ValueChanged" Thumb.DragDelta="progressSlider_DragDelta" />
+        
+        <ListBox x:Name="playlistListBox" HorizontalAlignment="Left" Height="132" Margin="39,202,0,0" VerticalAlignment="Top" Width="521"/>
+    </Grid>
+</Window>
